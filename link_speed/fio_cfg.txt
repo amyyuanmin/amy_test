@@ -1,0 +1,6 @@
+#fio config, timout is for each test case, not total
+[Fio]
+link_speed_fio:link_speed_fio.fio
+link_speed_fio_timeout:1900
+link_speed_2h:link_speed_2h.fio
+link_speed_2h_timeout:400
