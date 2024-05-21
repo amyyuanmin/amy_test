@@ -1,0 +1,1 @@
+pytest fio.py -s --junitxml=./iol_result.xml
