@@ -1,0 +1,12 @@
+#fio config, timout is for each test case, not total
+[Fio]
+precommit:precommit.fio
+precommit_timeout:500
+postcommit:postcommit.fio
+postcommit_timeout:1000
+nightly:nightly.fio
+nightly_timeout:2000
+fio_group1:group1.fio
+fio_group1_timeout:4000
+fio_sdk:sdk.fio
+fio_sdk_timeout:1200

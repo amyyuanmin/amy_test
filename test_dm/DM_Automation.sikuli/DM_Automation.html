@@ -1,0 +1,119 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>DM_Automation.sikuli</h2> <a href="DM_Automation.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> os
+<span class="kw">import</span> sys
+<span class="kw">from</span> datetime <span class="kw">import</span> timedelta
+<span class="kw">from</span> datetime <span class="kw">import</span> datetime
+<span class="kw">def</span> FindRecentFolder(folder):
+    lists = os.listdir(folder)  <span class="cmt">#List all folder in protocol directories and return the list.</span>
+    test_dir = folder
+    <span class="kw">print</span>(<span class="str">"test dir is {}"</span>.format(test_dir))
+    lists.sort(key=<span class="kw">lambda</span> fn:os.path.getmtime(test_dir + <span class="str">'\\'</span> + fn)) <span class="cmt">#According time to sort the element in lists.</span>
+    file_path = os.path.join(test_dir, lists[-<span class="dig">1</span>])
+    <span class="kw">return</span> file_path
+<span class="skw">doubleClick</span>(<img src="1553678989981.png" />)
+<span class="skw">wait</span>(<span class="dig">10</span>)
+
+<span class="skw">doubleClick</span>(<img src="1529478806503.png" />)
+<span class="skw">wait</span>(<img src="1553673202367.png" />)
+<span class="skw">click</span>(Pattern(<img src="1553767862084.png" />).similar(<span class="dig">0.90</span>))
+<span class="skw">click</span>(<img src="1553673303704.png" />)
+exists(<img src="1553738677820.png" />)
+<span class="skw">doubleClick</span>(<img src="1529478916341.png" />)
+T2_folder = sys.argv[<span class="dig">1</span>]
+T3_folder = sys.argv[<span class="dig">2</span>]
+
+<span class="skw">wait</span>(<span class="dig">180</span>)
+T2_recent_folder = FindRecentFolder(T2_folder)
+<span class="kw">print</span>(<span class="str">"T2 recent folder is {}"</span>.format(T2_recent_folder))
+wait_until = datetime.now() + timedelta(hours=int(<span class="dig">1</span>))
+<span class="kw">while</span> <span class="dig">1</span>:
+    <span class="kw">if</span> len(os.listdir(T2_recent_folder)) &gt;= <span class="dig">30</span>:
+        <span class="kw">print</span>(len(os.listdir(T2_recent_folder)))
+        <span class="kw">break</span>
+    <span class="kw">elif</span> wait_until &lt; datetime.now():
+        <span class="kw">print</span>(<span class="str">"timeout"</span>)
+        <span class="kw">break</span>
+<span class="skw">wait</span>(<span class="dig">180</span>)
+T3_recent_folder = FindRecentFolder(T3_folder)
+<span class="kw">print</span>(<span class="str">"T3 recent folder is {}"</span>.format(T3_recent_folder))
+<span class="kw">while</span> <span class="dig">1</span>:
+    <span class="kw">if</span> len(os.listdir(T3_recent_folder)) &gt;= <span class="dig">34</span>:
+        <span class="kw">print</span>(len(os.listdir(T3_recent_folder)))
+        <span class="kw">break</span>
+    <span class="kw">elif</span> wait_until &lt; datetime.now():
+        <span class="kw">print</span>(<span class="str">"timeout"</span>)
+        <span class="kw">break</span>
+</pre>
+</body>
+</html>

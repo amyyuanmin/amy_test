@@ -1,6 +1,0 @@
-#flash config for TSB
-# rom change to erase will erase all and flash fw.
-[IOL]
-iol_version:iol_interact-12.0a
-server_folder=svt@10.25.130.97:/home/kk/logs/CI_Test
-postcommit_iol_timeout=180
