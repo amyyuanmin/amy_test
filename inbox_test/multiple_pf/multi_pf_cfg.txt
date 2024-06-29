@@ -1,0 +1,8 @@
+#basic_range/stress_range - range for basic/stress IO test, support % or specified size unit, for ex. g
+[multi_pf]
+max_pf_amount:16
+supported_lbaf:0,1,2,3,4,5,6,7,8,9,10,11,12,14
+io_cfg:simple-fio.fio
+timeout:3600
+basic_range:20%
+stress_range:80%

@@ -1,0 +1,68 @@
+#fio config, timout is for each test case, not total
+#you can specify q-depth or block size for loop purpose by adjust .fio cfg file
+#in .fio file iodepth value will be iterated by _qd vales, while bs value by _io_size values if $QD/$BS in case name
+#_timeout, timeout for each test
+#_runtime, run time for each test
+#_loop, only valid for performance
+#_offset, 512b for unalign, 0 for align scenario
+[Fio]
+vail-precommit:vail-precommit.fio
+vail-precommit_timeout:180
+vail-precommit_runtime:30
+vail-precommit_qd:4, 256
+
+vail-postcommit:vail-postcommit.fio
+vail-postcommit_timeout:400
+vail-postcommit_runtime:300
+vail-postcommit_io_size:4K, 8K, 32K, 128K
+vail-postcommit_qd:4, 256
+
+simple-fio:simple-fio.fio
+simple-fio_timeout:120
+simple-fio_runtime:30
+simple-fio_qd:256
+
+simple-fio-ramdrive:simple-fio-ramdrive.fio
+simple-fio-ramdrive_timeout:60
+simple-fio-ramdrive_runtime:30
+simple-fio-ramdrive_qd:256
+
+vail-performance-ramdrive:vail-performance-ramdrive.fio
+vail-performance-ramdrive_timeout:120 
+
+vail-performance-E2e:vail-performance-E2e.fio
+vail-performance-E2e_timeout:120 
+
+vail-ramdrive:vail-ramdrive.fio
+vail-ramdrive_timeout:1200
+vail-ramdrive_runtime:300
+vail-ramdrive_io_size:4K, 8K, 32K, 128K
+vail-ramdrive_qd:4, 256
+
+vail-evb:vail-evb.fio
+vail-evb_timeout:360
+vail-evb_runtime:300
+vail-evb_qd:4, 256
+vail-evb_io_size:4K, 8K, 16K, 32K, 64K, 128K
+vail-evb_offset:0
+
+vail-haps:vail-haps.fio
+vail-haps_timeout:360
+vail-haps_runtime:300
+vail-haps_qd:4, 256
+vail-haps_io_size:4K, 8K, 16K, 32K, 64K, 128K
+vail-haps_offset:0
+
+vail-write:vail-write.fio
+vail-write_timeout:120
+vail-write_runtime:30
+vail-write_qd:4, 256
+
+vail-pause-nvme-sq:vail-pause-nvme-sq.fio
+vail-pause-nvme-sq_timeout:400
+
+vail-large-cmd:vail-large-cmd.fio
+vail-large-cmd_timeout:600
+vail-large-cmd_runtime:120
+vail-large-cmd_io_size:256k, 512k, 1024k, 1276k
+vail-large-cmd_qd:512

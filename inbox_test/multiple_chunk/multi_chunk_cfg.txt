@@ -1,0 +1,7 @@
+[multi_chunk]
+mdts:9
+io_cfg:multi_chunk.fio
+timeout:500
+128k_divisible:2048k,2048k
+128k_nondivisible:2024k,2024k
+stress:2048k,2048k

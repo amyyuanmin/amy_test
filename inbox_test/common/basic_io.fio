@@ -1,0 +1,25 @@
+#do not modify the section name, be sure the fio version is not lower than 3.27
+[global]
+ioengine=${IOENGINE}
+direct=1
+buffered=0
+continue_on_error=none
+group_reporting
+verify=pattern
+verify_dump=1
+verify_fatal=1
+verify_backlog=1
+verify_pattern=${PATTERN}
+filename=${NS}
+
+[basic_io]
+bs=${BS}
+iodepth=${QD}
+rw=${IOTYPE}
+offset=${OFFSET}
+size=${SIZE}
+do_verify=${VERIFY}
+numjobs=${THREAD}
+thread
+runtime=${RUNTIME}
+time_based=${TIMEBASED}

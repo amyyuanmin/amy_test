@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoTest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AutoExit>true</AutoExit>
+  <CreateLogFiles>true</CreateLogFiles>
+  <LogFilesFolder>
+    <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\log</AbsolutePath>
+    <RelativePath>log</RelativePath>
+  </LogFilesFolder>
+  <CreateUARTFiles>true</CreateUARTFiles>
+  <UARTFilesFolder>
+    <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\UART</AbsolutePath>
+    <RelativePath>UART</RelativePath>
+  </UARTFilesFolder>
+  <ChartFolder>
+    <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\charts</AbsolutePath>
+    <RelativePath>charts</RelativePath>
+  </ChartFolder>
+  <CreateSummary>true</CreateSummary>
+  <SummaryFolder>
+    <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\summary</AbsolutePath>
+    <RelativePath>summary</RelativePath>
+  </SummaryFolder>
+  <SummaryFilename>TestSummary.xml</SummaryFilename>
+  <TestPlan>
+    <DriveNumber>1</DriveNumber>
+    <Filename>
+      <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\Drive_1_TestPlan.xml</AbsolutePath>
+      <RelativePath>scripts\Drive_1_TestPlan.xml</RelativePath>
+    </Filename>
+  </TestPlan>
+  <TestPlan>
+    <DriveNumber>2</DriveNumber>
+    <Filename>
+      <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\Drive_2_TestPlan.xml</AbsolutePath>
+      <RelativePath>scripts\Drive_2_TestPlan.xml</RelativePath>
+    </Filename>
+  </TestPlan>
+  <TestPlan>
+    <DriveNumber>3</DriveNumber>
+    <Filename>
+      <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\Drive_3_TestPlan.xml</AbsolutePath>
+      <RelativePath>scripts\Drive_3_TestPlan.xml</RelativePath>
+    </Filename>
+  </TestPlan>
+  <TestPlan>
+    <DriveNumber>4</DriveNumber>
+    <Filename>
+      <AbsolutePath>G:\Marvo_0.2.3.8\Pre_testAligned\scripts\Drive_4_TestPlan.xml</AbsolutePath>
+      <RelativePath>scripts\Drive_4_TestPlan.xml</RelativePath>
+    </Filename>
+  </TestPlan>
+  <RegisterIndexFolder />
+</AutoTest>

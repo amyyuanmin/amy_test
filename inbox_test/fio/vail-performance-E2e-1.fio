@@ -1,0 +1,30 @@
+# $BS/$QD(optional, if not used, no affect by external input), $BS to accept external block size input, $QD accept iodepth input.
+# You should specify bs=*, iodepth=*, runtime=* below, the value will be replaced if there're external input. 
+# If no item specified, not value will be added, for ex, if no runtime=* specified, no external input of time will be added, 
+# so that we can control here as well if some param needed, for example, we do not want to specify runtime for some of cases
+# Additionally, considering scenario that if I want to specify numjobs=1 while another with numjobs=2, which I do not expect this value 
+# be replaced by external input. So specify $ for values to be replaced.
+[global]
+ioengine=libaio
+direct=1
+buffered=0
+offset=0
+size=10g
+continue_on_error=none
+runtime=60
+
+group_reporting
+
+[seqwr_128k_iodepth_1x16]
+bs=128k
+iodepth=16
+rw=write
+filename=/dev/nvme0n1
+stonewall
+
+[seqrd_128k_iodepth_1x16]
+bs=128k
+iodepth=16
+rw=read
+filename=/dev/nvme0n1
+stonewall

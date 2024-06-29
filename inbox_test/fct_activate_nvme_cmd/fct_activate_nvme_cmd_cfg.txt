@@ -1,0 +1,3 @@
+[fct_activate_nvme_cmd]
+io_cfg:fct_activate_nvme_cmd.fio
+timeout:500

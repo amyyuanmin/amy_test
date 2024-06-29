@@ -1,0 +1,6 @@
+[VF Tput Mgmt]
+qd: 4,128,512
+bs: 4k,128k,512k
+thread: 1
+runtime: 60
+timeout: 90

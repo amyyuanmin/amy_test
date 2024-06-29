@@ -1,0 +1,14 @@
+[Consistent Completion]
+#io_cfg: basic_read_write.fio
+#latency in msec
+latency: 50,123,500
+#ref value without consistent completion latency, in msec
+latency_ref: 10
+qd: 4
+#No handle for multi-chunk for CCL
+bs: 4k,128k
+#it seems that if thread beyond 1, or qd too large, the latency statistic of fio is not accurate
+thread: 1
+runtime: 60
+timeout: 110
+allowed_delta: 0.1

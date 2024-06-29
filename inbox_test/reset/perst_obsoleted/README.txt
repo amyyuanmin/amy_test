@@ -1,0 +1,1 @@
+Scripts in this folder is implemented based on Quarch + FIO, and not fully worked. Currently use Quarch + pynvme to realize the testing.

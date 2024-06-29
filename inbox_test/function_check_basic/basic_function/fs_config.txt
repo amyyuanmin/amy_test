@@ -1,0 +1,19 @@
+#list all file system
+[File System Type]
+fs_type:ext4
+
+#1 primary partition and no logical partition
+#[1_pp_0_lp]
+#primary_partition:1
+#logical_partition:0
+#partition_size:
+
+#1 primary partition and 1 logical partition
+[1_pp_1_lp]
+primary_partition:1
+logical_partition:1
+
+#1 primary partition and 3 logical partition
+#[2_pp_5_lp]
+#primary_partition:2
+#logical_partition:5

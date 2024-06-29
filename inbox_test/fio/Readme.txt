@@ -1,0 +1,1 @@
+pytest test_fio.py --case_suite=precommit -s --junitxml=./fio_result.xml
