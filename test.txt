@@ -1,0 +1,9 @@
+[2024-07-04 21:13:01.901] INFO precondition(325): in steady state now
+[2024-07-04 21:13:01.904] INFO script(73): setup random seed: 0xb4dfbfc3
+python3: driver.c:2292: ns_table_init: Assertion `lock_table' failed.
+Fatal Python error: Aborted
+
+Current thread 0x00007ffff7bf5740 (most recent call first):
+  File "/home/fte/amy/PyNVMe3-script/conftest.py", line 189 in verify
+  File "/usr/local/lib/python3.8/dist-packages/_pytest/fixtures.py", line 901 in call_fixture_func
+  File "/usr/local/lib/python3.8/dist-packages/_pytest/fixtures.py", line 1129 in pytest_fixture_se
